@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="현재시간 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-A6-GdL">
+                                <rect key="frame" x="30" y="76" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="선택시간 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISG-1Z-iEj">
+                                <rect key="frame" x="30" y="855" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Wn8-fC-6GB">
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="gJt-XW-tfL"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wn8-fC-6GB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Bp-ya-c3R"/>
+                            <constraint firstItem="ISG-1Z-iEj" firstAttribute="top" secondItem="Wn8-fC-6GB" secondAttribute="bottom" constant="272" id="OKR-TL-hO6"/>
+                            <constraint firstItem="Wn8-fC-6GB" firstAttribute="centerX" secondItem="Vfz-A6-GdL" secondAttribute="centerX" id="Pxg-DY-sdz"/>
+                            <constraint firstItem="ISG-1Z-iEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Rup-Ap-IWY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ISG-1Z-iEj" secondAttribute="bottom" id="TGV-Y4-feP"/>
+                            <constraint firstItem="Vfz-A6-GdL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="YEk-j6-mlX"/>
+                            <constraint firstItem="ISG-1Z-iEj" firstAttribute="centerX" secondItem="Vfz-A6-GdL" secondAttribute="centerX" id="Yrk-Um-uUk"/>
+                            <constraint firstItem="Wn8-fC-6GB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n3G-Mw-ws8"/>
+                            <constraint firstItem="Wn8-fC-6GB" firstAttribute="top" secondItem="Vfz-A6-GdL" secondAttribute="bottom" constant="270" id="sbu-tA-Rv0"/>
+                            <constraint firstItem="Vfz-A6-GdL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="wMS-pL-6EG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblCurrentTime" destination="Vfz-A6-GdL" id="gNc-cJ-rdO"/>
+                        <outlet property="lblSelectTime" destination="ISG-1Z-iEj" id="MRa-Ya-emj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
